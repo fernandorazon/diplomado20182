@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  miprimeraapp
+//  prueba
 //
-//  Created by d182_fernando_r on 16/02/18.
-//  Copyright © 2018 d182_fernando_r. All rights reserved.
+//  Created by markmota on 2/24/18.
+//  Copyright © 2018 markmota. All rights reserved.
 //
 
 import UIKit
