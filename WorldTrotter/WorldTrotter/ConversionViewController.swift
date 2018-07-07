@@ -29,6 +29,12 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print("ConversionViewController loaded its view.")
+        updateCelsiusLabel()
+    }
+    
     //Funcion que actualiza al label y se llama en el setter del farenheitValue
     func updateCelsiusLabel() {
         if let celsiusValue = celsiusValue {
