@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		4A0D5FBB204F0C4900705AAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D5FBA204F0C4900705AAD /* AppDelegate.swift */; };
-		4A0D5FBD204F0C4900705AAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D5FBC204F0C4900705AAD /* ViewController.swift */; };
 		4A0D5FC0204F0C4900705AAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A0D5FBE204F0C4900705AAD /* Main.storyboard */; };
 		4A0D5FC2204F0C4900705AAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A0D5FC1204F0C4900705AAD /* Assets.xcassets */; };
 		4A0D5FC5204F0C4900705AAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A0D5FC3204F0C4900705AAD /* LaunchScreen.storyboard */; };
 		4A0D5FD0204F0C4900705AAD /* WorldTrotterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D5FCF204F0C4900705AAD /* WorldTrotterTests.swift */; };
 		4A0D5FDB204F0C4900705AAD /* WorldTrotterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D5FDA204F0C4900705AAD /* WorldTrotterUITests.swift */; };
+		4F2798D020F05820005BC13E /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2798CF20F05820005BC13E /* ConversionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		4A0D5FB7204F0C4900705AAD /* WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A0D5FBA204F0C4900705AAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4A0D5FBC204F0C4900705AAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4A0D5FBF204F0C4900705AAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A0D5FC1204F0C4900705AAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A0D5FC4204F0C4900705AAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		4A0D5FD6204F0C4900705AAD /* WorldTrotterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldTrotterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A0D5FDA204F0C4900705AAD /* WorldTrotterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTrotterUITests.swift; sourceTree = "<group>"; };
 		4A0D5FDC204F0C4900705AAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F2798CF20F05820005BC13E /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +97,8 @@
 		4A0D5FB9204F0C4900705AAD /* WorldTrotter */ = {
 			isa = PBXGroup;
 			children = (
+				4F2798CF20F05820005BC13E /* ConversionViewController.swift */,
 				4A0D5FBA204F0C4900705AAD /* AppDelegate.swift */,
-				4A0D5FBC204F0C4900705AAD /* ViewController.swift */,
 				4A0D5FBE204F0C4900705AAD /* Main.storyboard */,
 				4A0D5FC1204F0C4900705AAD /* Assets.xcassets */,
 				4A0D5FC3204F0C4900705AAD /* LaunchScreen.storyboard */,
@@ -188,7 +188,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = d182_fernando_r;
 				TargetAttributes = {
 					4A0D5FB6204F0C4900705AAD = {
@@ -259,7 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A0D5FBD204F0C4900705AAD /* ViewController.swift in Sources */,
+				4F2798D020F05820005BC13E /* ConversionViewController.swift in Sources */,
 				4A0D5FBB204F0C4900705AAD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,6 +329,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -336,6 +337,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -386,6 +388,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -393,6 +396,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
