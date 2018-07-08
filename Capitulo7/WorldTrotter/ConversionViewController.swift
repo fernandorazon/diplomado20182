@@ -47,8 +47,8 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     
     //La funcion que se dispara al cambiar el textField.text es un casteo
     @IBAction func fahrenheitFieldEditingChanged(_ textField: UITextField) {
-        if let text = textField.text, let value = Double(text) {
-            fahrenheitValue = Measurement(value: value, unit: .fahrenheit)
+        if let text = textField.text, let number = numberFormatter.number(from: text) {
+            fahrenheitValue = Measurement(value: number.doubleValue, unit: .fahrenheit)
         } else {
             fahrenheitValue = nil
         }
@@ -72,11 +72,13 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     //Sean agregados en el textField.text
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        //print("Current text: \(String(describing: textField.text))")
-        //print("Replacement text: \(string)")
-        
-        let existingTextHasDecimalSeparator = textField.text?.range(of: ".")
-        let replacementTextHasDecimalSeparator = string.range(of: ".")
+        //Se hace referencia a los separadores regionales de cantidades para que
+        //la funcionalidad de esta funcion aplique para cualquier region
+        let currentLocale = Locale.current
+        let decimalSeparator = currentLocale.decimalSeparator ?? "."
+        let existingTextHasDecimalSeparator = textField.text?.range(of: decimalSeparator)
+        let replacementTextHasDecimalSeparator = string.range(of: decimalSeparator)
+
         
         if existingTextHasDecimalSeparator != nil,
             replacementTextHasDecimalSeparator != nil {
