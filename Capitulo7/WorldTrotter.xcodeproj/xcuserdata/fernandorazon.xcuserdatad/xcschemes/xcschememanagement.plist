@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>WorldTrotter.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>4A0D5FB6204F0C4900705AAD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4A0D5FCA204F0C4900705AAD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4A0D5FD5204F0C4900705AAD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
