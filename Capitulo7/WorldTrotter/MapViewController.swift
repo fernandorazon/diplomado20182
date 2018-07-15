@@ -21,7 +21,11 @@ class MapViewController: UIViewController {
         view = mapView
         
         //Se agrega una barra de botones segmentados con sus propiedades
-        let segmentedControl = UISegmentedControl(items: ["Standard", "Hybrid", "Satellite"])
+        //Se internacioalizan los strings de los botones segmentados
+        let standardString = NSLocalizedString("Standard", comment: "Standard map view")
+        let satelliteString = NSLocalizedString("Satellite", comment: "Satellite map view")
+        let hybridString = NSLocalizedString("Hybrid", comment: "Hybrid map view")
+        let segmentedControl = UISegmentedControl(items: [standardString, satelliteString, hybridString])
         segmentedControl.backgroundColor = UIColor.white.withAlphaComponent(0.5)
         segmentedControl.selectedSegmentIndex = 0
         //Se agrega un target-action

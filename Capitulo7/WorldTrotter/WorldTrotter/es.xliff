@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="WorldTrotter/Base.lproj/Main.storyboard" source-language="en" datatype="plaintext" target-language="es">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="9.3.1" build-num="9E501"/>
+    </header>
+    <body>
+      <trans-unit id="2J9-sw-VoT.title">
+        <source>Map</source>
+        <target>Mapa</target>
+        <note>Class = "UITabBarItem"; title = "Map"; ObjectID = "2J9-sw-VoT";</note>
+      </trans-unit>
+      <trans-unit id="JwO-Z3-p1F.text">
+        <source>is really</source>
+        <target>es realmente</target>
+        <note>Class = "UILabel"; text = "is really"; ObjectID = "JwO-Z3-p1F";</note>
+      </trans-unit>
+      <trans-unit id="PlO-wJ-0Ka.text">
+        <source>100</source>
+        <target>100</target>
+        <note>Class = "UILabel"; text = "100"; ObjectID = "PlO-wJ-0Ka";</note>
+      </trans-unit>
+      <trans-unit id="S3j-Hb-mZJ.text">
+        <source>degrees Fahrenheit </source>
+        <target>grados Fahrenheit </target>
+        <note>Class = "UILabel"; text = "degrees Fahrenheit "; ObjectID = "S3j-Hb-mZJ";</note>
+      </trans-unit>
+      <trans-unit id="T9l-Qj-GMK.text">
+        <source>degrees Celsius</source>
+        <target>grados Celsius</target>
+        <note>Class = "UILabel"; text = "degrees Celsius"; ObjectID = "T9l-Qj-GMK";</note>
+      </trans-unit>
+      <trans-unit id="XDa-ph-bLL.placeholder">
+        <source>value</source>
+        <target>valor</target>
+        <note>Class = "UITextField"; placeholder = "value"; ObjectID = "XDa-ph-bLL";</note>
+      </trans-unit>
+      <trans-unit id="mQR-gs-h9S.title">
+        <source>Convert</source>
+        <target>Convertir</target>
+        <note>Class = "UITabBarItem"; title = "Convert"; ObjectID = "mQR-gs-h9S";</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="WorldTrotter/en.lproj/InfoPlist.strings" datatype="plaintext" source-language="en" target-language="es">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="9.3.1" build-num="9E501"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="WorldTrotter/en.lproj/Localizable.strings" source-language="en" datatype="plaintext" target-language="es">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="9.3.1" build-num="9E501"/>
+    </header>
+    <body>
+      <trans-unit id="Hybrid">
+        <source>Hybrid</source>
+        <target>Híbrido</target>
+        <note>Hybrid map view</note>
+      </trans-unit>
+      <trans-unit id="Satellite">
+        <source>Satellite</source>
+        <target>Satélite</target>
+        <note>Satellite map view</note>
+      </trans-unit>
+      <trans-unit id="Standard">
+        <source>Standard</source>
+        <target>Estándar</target>
+        <note>Standard map view</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="WorldTrotterTests/en.lproj/InfoPlist.strings" datatype="plaintext" source-language="en" target-language="es">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="9.3.1" build-num="9E501"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="WorldTrotterUITests/en.lproj/InfoPlist.strings" datatype="plaintext" source-language="en" target-language="es">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="9.3.1" build-num="9E501"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
