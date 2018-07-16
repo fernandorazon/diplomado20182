@@ -13,22 +13,18 @@ class ItemsViewController: UITableViewController {
     
     var itemStore: ItemStore!
     
-    
-    
+    //Agregamos el boton de editar automaticamente en este constructor
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        navigationItem.leftBarButtonItem = editButtonItem
+    }
+
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        
-        //Limita el punto de inicio scrolleo de la tabla para que no se overlape con
-        //la parte de arriba, ni el indicador de scroll a su vez
-        let statusBarHeight = UIApplication.shared.statusBarFrame.height
-        let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
-        tableView.contentInset = insets
-        tableView.scrollIndicatorInsets = insets
         
         //Para computar el tamanio de celda basado en constraints
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 65
+        //tableView.estimatedRowHeight = 65
         
     }
     
@@ -97,20 +93,14 @@ class ItemsViewController: UITableViewController {
         }
     }
     
-    
-    
-    
-    
-    
+    //Recarga la tabla cuando vuelve a aparecer para que los datos cambiados se presenten adecuadamente
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
     
     //Estos metodos son llamados al tapear los botones correspondientes
-    @IBAction func addNewItem(_ sender: UIButton) {
-        
-//        // Make a new index path for the 0th section, last row
-//        let lastRow = tableView.numberOfRows(inSection: 0)
-//        let indexPath = IndexPath(row: lastRow, section: 0)
-//        // Insert this new row into the table
-//        tableView.insertRows(at: [indexPath], with: .automatic)
+    @IBAction func addNewItem(_ sender: UIBarButtonItem) {
         
         // Create a new item and add it to the store
         let newItem = itemStore.createItem()
@@ -122,23 +112,6 @@ class ItemsViewController: UITableViewController {
         }
         
     }
-    @IBAction func toggleEditingMode(_ sender: UIButton) {
-        
-        // If you are currently in editing mode...
-        if isEditing {
-            // Change text of button to inform user of state
-            sender.setTitle("Edit", for: .normal)
-            // Turn off editing mode
-            setEditing(false, animated: true)
-        } else {
-            // Change text of button to inform user of state
-            sender.setTitle("Done", for: .normal)
-            // Enter editing mode
-            setEditing(true, animated: true)
-        }
-        
-    }
-
     
 }
 
