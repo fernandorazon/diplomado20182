@@ -80,8 +80,30 @@ class ItemsViewController: UITableViewController {
         itemStore.moveItem(from: sourceIndexPath.row, to: destinationIndexPath.row)
     }
     
-    //Estos metodos son llamados al tapear los botones correspondientes
+    //Permite pasar el item que fue seleccionado al siguiente controlador
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // If the triggered segue is the "showItem" segue
+        switch segue.identifier {
+        case "showItem"?:
+            // Figure out which row was just tapped
+            if let row = tableView.indexPathForSelectedRow?.row {
+                // Get the item associated with this row and pass it along
+                let item = itemStore.allItems[row]
+                let detailViewController
+                    = segue.destination as! DetailViewController
+                detailViewController.item = item
+            } default:
+                preconditionFailure("Unexpected segue identifier.")
+        }
+    }
     
+    
+    
+    
+    
+    
+    
+    //Estos metodos son llamados al tapear los botones correspondientes
     @IBAction func addNewItem(_ sender: UIButton) {
         
 //        // Make a new index path for the 0th section, last row

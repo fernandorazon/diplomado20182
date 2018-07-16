@@ -17,6 +17,7 @@
 		4F40611220FC107000E1F4C1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F40611120FC107000E1F4C1 /* Item.swift */; };
 		4F40611420FC176900E1F4C1 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F40611320FC176900E1F4C1 /* ItemStore.swift */; };
 		4F40611620FC475900E1F4C1 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F40611520FC475900E1F4C1 /* ItemCell.swift */; };
+		4F40611820FC65A700E1F4C1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F40611720FC65A700E1F4C1 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		4F40611120FC107000E1F4C1 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		4F40611320FC176900E1F4C1 /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 		4F40611520FC475900E1F4C1 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		4F40611720FC65A700E1F4C1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				4F40610F20FC0F4200E1F4C1 /* ItemsViewController.swift */,
 				4F40611520FC475900E1F4C1 /* ItemCell.swift */,
 				4F4060E520FC0AD500E1F4C1 /* Main.storyboard */,
+				4F40611720FC65A700E1F4C1 /* DetailViewController.swift */,
 				4F4060E820FC0AD600E1F4C1 /* Assets.xcassets */,
 				4F4060EA20FC0AD600E1F4C1 /* LaunchScreen.storyboard */,
 				4F4060ED20FC0AD600E1F4C1 /* Info.plist */,
@@ -268,6 +271,7 @@
 				4F40611020FC0F4200E1F4C1 /* ItemsViewController.swift in Sources */,
 				4F40611220FC107000E1F4C1 /* Item.swift in Sources */,
 				4F40611420FC176900E1F4C1 /* ItemStore.swift in Sources */,
+				4F40611820FC65A700E1F4C1 /* DetailViewController.swift in Sources */,
 				4F4060E220FC0AD500E1F4C1 /* AppDelegate.swift in Sources */,
 				4F40611620FC475900E1F4C1 /* ItemCell.swift in Sources */,
 			);
