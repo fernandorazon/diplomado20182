@@ -26,6 +26,10 @@ class ItemsViewController: UITableViewController {
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
         
+        //Para computar el tamanio de celda basado en constraints
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 65
+        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,17 +38,16 @@ class ItemsViewController: UITableViewController {
     
     //Formato a las celdas
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Instancia de la celda con estilo default
-        //let cell = UITableViewCell(style: .value1, reuseIdentifier: "UITableViewCell")
-        //Instancia o reusa una celda
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-        // Set the text on the cell with the description of the item
-        // that is at the nth index of items, where n = row this cell
-        // will appear in on the tableview
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemCell
+        
         let item = itemStore.allItems[indexPath.row]
-        //Se agrega texto a las subvistas de la celda con el nombre de los items
-        cell.textLabel?.text = item.name
-        cell.detailTextLabel?.text = "$\(item.valueInDollars)"
+        
+        // Configure the cell with the Item
+        cell.nameLabel.text = item.name
+        cell.serialNumberLabel.text = item.serialNumber
+        cell.valueLabel.text = "$\(item.valueInDollars)"
+        
         return cell
     }
     

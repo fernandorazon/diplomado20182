@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -47,29 +48,48 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" textLabel="yPS-Wr-INF" detailTextLabel="OAY-Qp-vtb" style="IBUITableViewCellStyleValue1" id="bJd-il-XqO">
-                                <rect key="frame" x="0.0" y="88" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="65" id="bJd-il-XqO" customClass="ItemCell" customModule="Homepwner" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="375" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bJd-il-XqO" id="1ae-g6-RPF">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bJd-il-XqO" id="1ae-g6-RPF" customClass="ItemCell" customModule="Homepwner" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yPS-Wr-INF">
-                                            <rect key="frame" x="16" y="12" width="33.5" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yiZ-41-6LD">
+                                            <rect key="frame" x="16" y="11" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OAY-Qp-vtb">
-                                            <rect key="frame" x="315" y="12" width="44" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyX-ru-v4h">
+                                            <rect key="frame" x="317" y="22" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2LW-m7-vUr">
+                                            <rect key="frame" x="16" y="40" width="31" height="12"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="yiZ-41-6LD" firstAttribute="top" secondItem="1ae-g6-RPF" secondAttribute="topMargin" id="4U3-Wj-CqA"/>
+                                        <constraint firstItem="yiZ-41-6LD" firstAttribute="leading" secondItem="1ae-g6-RPF" secondAttribute="leadingMargin" id="Jrf-Xg-8DK"/>
+                                        <constraint firstItem="tyX-ru-v4h" firstAttribute="leading" secondItem="yiZ-41-6LD" secondAttribute="trailing" constant="259" id="aLi-5M-YnC"/>
+                                        <constraint firstItem="2LW-m7-vUr" firstAttribute="top" secondItem="yiZ-41-6LD" secondAttribute="bottom" constant="8" id="heg-Lg-iCc"/>
+                                        <constraint firstItem="2LW-m7-vUr" firstAttribute="leading" secondItem="yiZ-41-6LD" secondAttribute="leading" id="i8v-Ku-b8e"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="2LW-m7-vUr" secondAttribute="bottom" constant="2" id="l4e-eK-wNg"/>
+                                        <constraint firstAttribute="trailing" secondItem="tyX-ru-v4h" secondAttribute="trailing" constant="16" id="whp-g8-0Vz"/>
+                                        <constraint firstItem="tyX-ru-v4h" firstAttribute="centerY" secondItem="1ae-g6-RPF" secondAttribute="centerY" id="yEv-Tg-HBD"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="yiZ-41-6LD" id="Gpw-V2-9uw"/>
+                                    <outlet property="serialNumberLabel" destination="2LW-m7-vUr" id="TYg-WU-F2U"/>
+                                    <outlet property="valueLabel" destination="tyX-ru-v4h" id="O94-jl-Brf"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
