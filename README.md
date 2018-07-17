@@ -1,3 +1,4 @@
 # diplomado20182
 
-Ejercicios ???
+Ejercicios del Diplomado de Desarrollo de Aplicaciones Moviles para IOS.
+Repositorio de Fernando Razon
