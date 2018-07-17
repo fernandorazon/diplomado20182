@@ -20,10 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Create an ItemStore
         let itemStore = ItemStore()
         
+        // Create an ImageStore
+        let imageStore = ImageStore()
+        
         // El navController sera el root y contendra como principal del stack a Itemsvc
         let navController = window!.rootViewController as! UINavigationController
         let itemsController = navController.topViewController as! ItemsViewController
         itemsController.itemStore = itemStore
+        itemsController.imageStore = imageStore
         
         return true
     }

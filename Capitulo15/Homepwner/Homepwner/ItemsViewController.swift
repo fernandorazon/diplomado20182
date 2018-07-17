@@ -12,6 +12,7 @@ import UIKit
 class ItemsViewController: UITableViewController {
     
     var itemStore: ItemStore!
+    var imageStore: ImageStore!
     
     //Agregamos el boton de editar automaticamente en este constructor
     required init?(coder aDecoder: NSCoder) {
@@ -59,12 +60,13 @@ class ItemsViewController: UITableViewController {
             let ac = UIAlertController(title: title,message: message, preferredStyle: .actionSheet)
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
             ac.addAction(cancelAction)
-            let deleteAction = UIAlertAction(title: "Delete", style: .destructive,
-                                             handler: { (action) -> Void in
-                                                // Remove the item from the store
-                                                self.itemStore.removeItem(item)
-                                                // Also remove that row from the table view with an animation
-                                                self.tableView.deleteRows(at: [indexPath], with: .automatic) })
+            let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: {(action) -> Void in
+                // Remove the item from the store
+                self.itemStore.removeItem(item)
+                // Remove the item's image from the image store
+                self.imageStore.deleteImage(forKey: item.itemKey)
+                // Also remove that row from the table view with an animation
+                self.tableView.deleteRows(at: [indexPath], with: .automatic) })
             ac.addAction(deleteAction)
             // Present the alert controller
             present(ac, animated: true, completion: nil)
@@ -88,6 +90,7 @@ class ItemsViewController: UITableViewController {
                 let detailViewController
                     = segue.destination as! DetailViewController
                 detailViewController.item = item
+                detailViewController.imageStore = imageStore
             } default:
                 preconditionFailure("Unexpected segue identifier.")
         }
